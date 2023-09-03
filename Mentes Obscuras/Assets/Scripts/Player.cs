@@ -47,6 +47,12 @@ public class Player : MonoBehaviour
             isJumping = false;
 
         }
+
+        if(collision.gameObject.tag == "Spikes")
+        {
+            GameMenager.instance.ShowGameOver();
+        
+        }
     }
 
      void OnCollisionExit2D(Collision2D collision)
