@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3889669161864761669}
   - component: {fileID: 933780394701520164}
   - component: {fileID: 3925898380402626549}
+  - component: {fileID: 1488035930427130280}
   m_Layer: 8
   m_Name: faca
   m_TagString: Untagged
@@ -101,3 +102,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.44
+--- !u!114 &1488035930427130280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5204277150159009205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01540dffd1320fb419dd932ece750c58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5

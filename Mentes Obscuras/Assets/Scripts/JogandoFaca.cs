@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class JogandoFaca : MonoBehaviour
+
 {
-    public GameObject miniObjectPrefab; 
+    public GameObject facaPrefab; //
+    public Transform shootPoint; 
     public float shootInterval = 2f; 
 
+    private Queue<GameObject> miniObjectQueue = new Queue<GameObject>();
     private float lastShootTime;
 
     private void Update()
@@ -20,11 +23,7 @@ public class JogandoFaca : MonoBehaviour
 
     void Shoot()
     {
-        GameObject miniObject = Instantiate(miniObjectPrefab, transform.position, transform.rotation);
-        Rigidbody rb = miniObject.GetComponent<Rigidbody>();
-        
-        
-        rb.velocity = transform.forward * 10f;
+       Instantiate(facaPrefab, transform.position, transform.rotation);
     }
+    
 }
-
