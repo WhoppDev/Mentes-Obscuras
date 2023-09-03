@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Grid
   layers:
   - Default
   - TransparentFX
@@ -11,10 +12,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Player
+  - Bullet
+  - Enemy
   - 
   - 
   - 
@@ -40,4 +41,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackGround
+    uniqueID: 1579334671
+    locked: 0
+  - name: Ground
+    uniqueID: 4231631639
+    locked: 0
+  - name: Player
+    uniqueID: 2776765079
+    locked: 0
+  - name: FortGround
+    uniqueID: 4014456585
     locked: 0
