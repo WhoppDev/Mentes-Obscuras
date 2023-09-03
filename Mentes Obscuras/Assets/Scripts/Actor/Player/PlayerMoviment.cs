@@ -6,8 +6,6 @@ using UnityEngine.InputSystem;
 public class PlayerMoviment : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] Transform groundCheck;
-    [SerializeField] LayerMask groundLayer;
 
     [SerializeField] private float playerSpeed;
     [SerializeField] private float jumpForce;
@@ -24,12 +22,21 @@ public class PlayerMoviment : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(direction * playerSpeed, rb.velocity.y);
+        Move();
     }
 
-    private bool isGrounded()
+    private void Move()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        rb.velocity = new Vector2(direction.x * playerSpeed, rb.velocity.y);
+
+        if (direction.x > 0)
+        {
+            transform.eulerAngles = new Vector2(0, 0);
+        }
+        if (direction.x < 0)
+        {
+            transform.eulerAngles = new Vector2(0, 180);
+        }
     }
 
 
@@ -42,7 +49,7 @@ public class PlayerMoviment : MonoBehaviour
     {
         if (value.started)
         {
-            rb.AddForce(Vector2.up * jumpForce );
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
     }
 
