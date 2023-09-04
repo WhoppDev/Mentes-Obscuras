@@ -53,6 +53,11 @@ public class Player : MonoBehaviour
             GameMenager.instance.ShowGameOver();
         
         }
+
+        if(collision.gameObject.tag == "faca")
+        {
+            GameMenager.instance.ShowGameOver();
+        }
     }
 
      void OnCollisionExit2D(Collision2D collision)
