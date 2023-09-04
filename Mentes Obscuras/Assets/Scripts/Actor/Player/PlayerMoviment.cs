@@ -6,13 +6,11 @@ using UnityEngine.InputSystem;
 public class PlayerMoviment : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] Transform groundCheck;
-    [SerializeField] LayerMask groundLayer;
 
     [SerializeField] private float playerSpeed;
     [SerializeField] private float jumpForce;
 
-    private float direction;
+    private Vector2 direction;
 
 
     // Start is called before the first frame update
@@ -24,25 +22,20 @@ public class PlayerMoviment : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(direction * playerSpeed, rb.velocity.y);
-    }
-
-    private bool isGrounded()
-    {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        rb.velocity = new Vector2(direction.x * playerSpeed, rb.velocity.y);
     }
 
 
     public void Moviment(InputAction.CallbackContext value)
     {
-        direction = value.ReadValue<float>();
+        direction = value.ReadValue<Vector2>();
     }
 
     public void Jump (InputAction.CallbackContext value)
     {
         if (value.started)
         {
-            rb.AddForce(Vector2.up * jumpForce );
+            rb.velocity = Vector2.up * jumpForce;
         }
     }
 
