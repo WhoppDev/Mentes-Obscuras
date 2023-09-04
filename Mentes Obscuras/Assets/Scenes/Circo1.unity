@@ -1598,6 +1598,7 @@ GameObject:
   - component: {fileID: 1485308428}
   - component: {fileID: 1485308427}
   - component: {fileID: 1485308431}
+  - component: {fileID: 1485308432}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -1728,13 +1729,74 @@ MonoBehaviour:
   m_GameObject: {fileID: 1485308426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0332013dc1e42534481fdf8fd13c8b34, type: 3}
+  m_Script: {fileID: 11500000, guid: 31cb3bddc2691f240bca93cafa99e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  JumpForce: 10
-  isJumping: 0
-  doubleJump: 0
+  rb: {fileID: 0}
+  playerSpeed: 5
+  jumpForce: 3
+--- !u!114 &1485308432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485308426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 549556b1cab53e04ea2b335f3ab72f0a, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1485308431}
+        m_TargetAssemblyTypeName: PlayerMoviment, Assembly-CSharp
+        m_MethodName: Moviment
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 48b138c2-0957-4968-950f-3342e9d2c3f7
+    m_ActionName: Player/Moviment[/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1485308431}
+        m_TargetAssemblyTypeName: PlayerMoviment, Assembly-CSharp
+        m_MethodName: Jump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ab05f4f1-f4ba-4c42-bdfa-ba43bf9fca9f
+    m_ActionName: Player/Jump[/Keyboard/space]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1716566899
 GameObject:
   m_ObjectHideFlags: 0
