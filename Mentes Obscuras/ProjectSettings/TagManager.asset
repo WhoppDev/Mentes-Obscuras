@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Grid
   - Spikes
+  - faca
   layers:
   - Default
   - TransparentFX
