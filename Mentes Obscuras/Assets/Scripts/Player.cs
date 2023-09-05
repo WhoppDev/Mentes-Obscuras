@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
 
         if(collision.gameObject.tag == "faca")
         {
-            GameMenager.instance.ShowGameOver();
+            GameManager.instance.ShowGameOver();
         }
     }
 
@@ -70,7 +70,7 @@ public class Player : MonoBehaviour
     {
       if(collision.gameObject.tag == "Spikes")
         {
-            GameMenager.instance.ShowGameOver();
+            GameManager.instance.ShowGameOver();
         
         }  
     }

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameMenager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
 
     public GameObject gameOver;
 
-    public static GameMenager instance;
+    public static GameManager instance;
     void Start()
     {
         instance = this;
