@@ -35,7 +35,7 @@ public class PlayerMoviment : MonoBehaviour
     {
         if (value.started)
         {
-            rb.velocity = Vector2.up * jumpForce;
+            rb.velocity = Vector2.up * jumpForce ;
         }
     }
 
