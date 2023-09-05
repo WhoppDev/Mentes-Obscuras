@@ -17,7 +17,7 @@ public class Faca : MonoBehaviour
         
     }
 
-    private void OntriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
     }
