@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Faca : MonoBehaviour
+public class Balao : MonoBehaviour
 {
-    [SerializeField] float speed;
+   [SerializeField] float speed;
     void Start()
     {
         
@@ -13,12 +13,17 @@ public class Faca : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.right * Time.deltaTime * speed);
+        transform.Translate(Vector3.up * Time.deltaTime * speed);
         
     }
 
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
+        if(collision.gameObject.tag == "Spikes")
+        {
+             Destroy(gameObject);
+        }
     }
+
 }
