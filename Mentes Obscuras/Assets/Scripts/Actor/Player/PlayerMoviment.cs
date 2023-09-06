@@ -23,6 +23,15 @@ public class PlayerMoviment : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = new Vector2(direction.x * playerSpeed, rb.velocity.y);
+
+        if (direction.x < 0)
+        {
+            transform.localScale = new Vector2(-1f, 1f);
+        }
+        else if (direction.x > 0)
+        {
+            transform.localScale = new Vector2(1f, 1f);
+        }
     }
 
 

@@ -22,10 +22,13 @@ public class GameManager : MonoBehaviour
     public void ShowGameOver()
     {
         gameOver.SetActive(true);
+        Time.timeScale = 0;
     }
     public void RestartGame()
     {
-        SceneManager.LoadScene("Circo1");
+        SceneManager.LoadScene("INICIAL");
+        gameOver.SetActive(false);
+        Time.timeScale = 1;
 
     }
 }
