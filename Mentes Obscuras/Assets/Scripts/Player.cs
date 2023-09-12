@@ -73,7 +73,13 @@ public class Player : MonoBehaviour
             Core.Instance.gameManager.ShowGameOver();
         
         }  
+        if(collision.gameObject.tag == "DeathZone")
+        {
+            Core.Instance.gameManager.ShowGameOver();
+        
+        }  
     }
+
 
 }
 

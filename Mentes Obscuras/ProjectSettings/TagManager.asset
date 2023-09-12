@@ -8,6 +8,7 @@ TagManager:
   - Spikes
   - faca
   - Balao
+  - DeathZone
   layers:
   - Default
   - TransparentFX

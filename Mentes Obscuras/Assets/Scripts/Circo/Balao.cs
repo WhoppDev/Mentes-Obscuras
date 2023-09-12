@@ -18,13 +18,17 @@ public class Balao : MonoBehaviour
         
     }
 
-    
-    private void OnTriggerEnter2D(Collider2D collision)
+     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Spikes")
+      if(collision.gameObject.tag == "DeathZone")
         {
-             Destroy(this.gameObject);
-        }
+            Destroy(this.gameObject);
+        
+        }  
     }
+
+
+    
+   
 
 }
