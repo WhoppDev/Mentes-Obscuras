@@ -21,4 +21,11 @@ public class Faca : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+      if(collision.gameObject.tag == "DeathZone")
+        {
+            Destroy(this.gameObject);
+        }  
+    }
 }
