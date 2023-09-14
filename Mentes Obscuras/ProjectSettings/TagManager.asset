@@ -9,6 +9,7 @@ TagManager:
   - faca
   - Balao
   - DeathZone
+  - Dano
   layers:
   - Default
   - TransparentFX
