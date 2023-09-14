@@ -25,7 +25,7 @@ public class Faca : MonoBehaviour
     {
       if(collision.gameObject.tag == "DeathZone")
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }  
     }
 }
