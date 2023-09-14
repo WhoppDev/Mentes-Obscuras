@@ -5,6 +5,7 @@ using UnityEngine;
 public class Faca : MonoBehaviour
 {
     [SerializeField] float speed;
+
     void Start()
     {
         
@@ -19,9 +20,14 @@ public class Faca : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.tag == "DeathZone")
+        {
+            Destroy(gameObject);
+        }  
         Destroy(gameObject);
     }
-    void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
       if(collision.gameObject.tag == "DeathZone")
         {

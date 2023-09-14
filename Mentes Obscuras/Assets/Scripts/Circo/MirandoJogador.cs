@@ -35,7 +35,7 @@ public class MirandoJogador : MonoBehaviour
     {
         if (facaPrefab != null)
         {
-            Instantiate(facaPrefab, shootPoint.position, shootPoint.rotation);
+            Instantiate(facaPrefab, transform.position, transform.rotation);
         }
     }
 
