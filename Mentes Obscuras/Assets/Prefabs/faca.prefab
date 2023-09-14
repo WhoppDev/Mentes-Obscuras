@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 933780394701520164}
   - component: {fileID: 3925898380402626549}
   - component: {fileID: 1488035930427130280}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: faca
   m_TagString: faca
   m_Icon: {fileID: 0}
@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1518202217
-  m_SortingLayer: 3
+  m_SortingLayerID: -63335657
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 0.07075471, b: 0.07075471, a: 1}

@@ -14,24 +14,21 @@ public class Faca : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         transform.Translate(Vector3.right * Time.deltaTime * speed);
-        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "DeathZone")
-        {
-            Destroy(gameObject);
-        }  
-        Destroy(gameObject);
+    
+        Destroy(this.gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
       if(collision.gameObject.tag == "DeathZone")
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }  
     }
 }
