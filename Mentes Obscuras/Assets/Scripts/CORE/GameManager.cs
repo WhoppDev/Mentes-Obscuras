@@ -24,11 +24,9 @@ public class GameManager : MonoBehaviour
         gameOver.SetActive(true);
         Time.timeScale = 0;
     }
-    public void RestartGame()
+    public void RestartGame(string fase1)
     {
-        SceneManager.LoadScene("INICIAL");
-        gameOver.SetActive(false);
-        Time.timeScale = 1;
+        SceneManager.LoadScene(fase1);
 
     }
 }
