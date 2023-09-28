@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneNext : MonoBehaviour
 {
-    public string fase1;
+    public string LevelName;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(fase1);
+            SceneManager.LoadScene(LevelName);
         }
     }
 }
