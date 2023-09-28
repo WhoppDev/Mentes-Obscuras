@@ -15,6 +15,8 @@ public class PlayerMoviment : MonoBehaviour
     [SerializeField] GameObject frontLantern;
     [SerializeField] GameObject upperLantern;
 
+    [SerializeField] private bool isGrounded = false;
+
     private Vector2 direction;
 
 
@@ -44,7 +46,7 @@ public class PlayerMoviment : MonoBehaviour
 
 
         #region LanternMoviment
-        if (direction.magnitude > 0.01f && !isUpperLantern)
+        if (direction.magnitude > 0.01f && !isUpperLantern && isGrounded)
         {
             anim.SetBool("isWalking", true);
         }
@@ -55,11 +57,11 @@ public class PlayerMoviment : MonoBehaviour
 
 
 
-        if (direction.magnitude > 0.01f && isUpperLantern)
+        if (direction.magnitude > 0.01f && isUpperLantern && isGrounded)
         {
             anim.SetBool("isUpper", true);
         }
-        else if (direction.magnitude <= 0 && isUpperLantern)
+        else if (direction.magnitude <= 0 && isUpperLantern && isGrounded)
         {
             anim.SetBool("isUpperStop", true);
         }
@@ -79,9 +81,11 @@ public class PlayerMoviment : MonoBehaviour
 
     public void Jump (InputAction.CallbackContext value)
     {
-        if (value.started)
+        if (value.started && isGrounded)
         {
+            anim.SetBool("Jump", true);
             rb.velocity = Vector2.up * jumpForce ;
+            isGrounded = false;
         }
     }
 
@@ -98,6 +102,16 @@ public class PlayerMoviment : MonoBehaviour
             frontLantern.SetActive(true);
             upperLantern.SetActive(false);
             isUpperLantern = false;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            isGrounded = true;
+            anim.SetBool("Jump", false);
+
         }
     }
 

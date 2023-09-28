@@ -6,6 +6,7 @@ public class DiaeNoite : MonoBehaviour
 {
     [SerializeField] private float timeSpeed;
 
+
     // Update is called once per frame
     void Update()
     {
