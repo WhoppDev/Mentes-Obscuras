@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Circo2.unity
     guid: f0bca60bc46814825828aa53c1984151
+  - enabled: 1
+    path: Assets/Scenes/Floresta.unity
+    guid: 2d19c54358b27714489153bdc96f485e
   m_configObjects: {}

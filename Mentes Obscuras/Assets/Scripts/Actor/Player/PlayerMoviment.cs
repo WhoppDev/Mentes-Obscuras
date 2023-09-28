@@ -111,6 +111,7 @@ public class PlayerMoviment : MonoBehaviour
         {
             isGrounded = true;
             anim.SetBool("Jump", false);
+            anim.SetBool("isFalling", false);
 
         }
     }
