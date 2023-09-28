@@ -10,6 +10,7 @@ TagManager:
   - Balao
   - DeathZone
   - Dano
+  - Ground
   layers:
   - Default
   - TransparentFX
