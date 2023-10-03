@@ -9,6 +9,7 @@ public class DiaeNoite : MonoBehaviour
     [SerializeField] private float timeSpeed;
 
     public Light2D globalLight2D;
+
     public float decreaseRate = 0.1f; // Taxa de diminuição da intensidade por segundo
 
     private float initialIntensity;
@@ -36,6 +37,8 @@ public class DiaeNoite : MonoBehaviour
             globalLight2D.intensity = 1f;
         }
     }
+
+
 
 
 }

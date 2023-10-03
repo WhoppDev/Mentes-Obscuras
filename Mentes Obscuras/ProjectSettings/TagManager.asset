@@ -11,6 +11,9 @@ TagManager:
   - DeathZone
   - Dano
   - Ground
+  - NPC
+  - Lantern
+  - Enemy
   layers:
   - Default
   - TransparentFX

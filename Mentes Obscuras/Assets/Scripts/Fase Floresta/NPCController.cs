@@ -10,6 +10,8 @@ public class NPCController : MonoBehaviour
 
     [SerializeField] private Image afraidBar;
 
+    [SerializeField] private Collider2D afraidCollider;
+
     [SerializeField] private int targetAtivo = 0;
     public bool isAfraid;
     public float afraidDecreaseRate = 0.1f;
@@ -75,5 +77,20 @@ public class NPCController : MonoBehaviour
             isAfraid = false;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (afraidCollider.IsTouching(collision) && collision.gameObject.CompareTag("Enemy"))
+        {
+            isAfraid = true;
+        }
+    }        
+    
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+            isAfraid = false;
+
+    }    
+    
 
 }
