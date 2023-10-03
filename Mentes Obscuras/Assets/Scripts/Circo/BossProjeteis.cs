@@ -1,21 +1,46 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BossProjeteis : MonoBehaviour
 {
-    public Transform player;
-    public GameObject projectilePrefab;
-    public float projectileSpeed = 5f;
+    public GameObject projectilePrefab; // Prefab a ser lançado
+    public Transform player; // Referência ao objeto "player"
+    public float launchInterval = 2f; // Intervalo entre os lançamentos
+    public float launchSpeed = 10f; // Velocidade do lançamento
 
-    public void ShootAtPlayer()
+    private float timeSinceLastLaunch = 0f;
+
+    void Update()
     {
-        if (player != null && projectilePrefab != null)
+        // Controle do intervalo de lançamento
+        timeSinceLastLaunch += Time.deltaTime;
+        if (timeSinceLastLaunch >= launchInterval)
+        {
+            LaunchProjectile();
+            timeSinceLastLaunch = 0f;
+        }
+
+        // Rotacione o SpawnPoint para mirar na direção do player
+        if (player != null)
         {
             Vector2 direction = (player.position - transform.position).normalized;
-            GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
+    }
+
+    void LaunchProjectile()
+    {
+        if (projectilePrefab != null)
+        {
+            // Cria o projétil
+            GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.rotation);
+
+            // Obtém o Rigidbody2D do projétil
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-            rb.velocity = direction * projectileSpeed;
+
+            // Define a velocidade do projétil
+            rb.velocity = transform.right * launchSpeed; // Usamos transform.right para a direção "frente" do SpawnPoint
         }
     }
 }
