@@ -14,11 +14,12 @@ TagManager:
   - NPC
   - Lantern
   - Enemy
+  - Shake
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Wall
   - Water
   - UI
   - Ground

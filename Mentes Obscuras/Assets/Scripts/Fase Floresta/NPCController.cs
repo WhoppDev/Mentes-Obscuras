@@ -84,8 +84,16 @@ public class NPCController : MonoBehaviour
         {
             isAfraid = true;
         }
-    }        
-    
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            targetAtivo = (targetAtivo + 1) % target.Length;
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
             isAfraid = false;

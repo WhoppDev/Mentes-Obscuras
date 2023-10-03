@@ -20,6 +20,16 @@ public class EnemyFollow : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindWithTag("NPC");
         lanternCollider = GameObject.FindWithTag("Lantern").GetComponent<Collider2D>();
+
+        enemyLife = 10f;
+    }
+
+    private void Update()
+    {
+        if(enemyLife <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     // Update is called once per frame
