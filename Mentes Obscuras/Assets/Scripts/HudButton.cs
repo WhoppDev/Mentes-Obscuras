@@ -5,7 +5,7 @@ public class HudButton : MonoBehaviour
 {
     public void CircuTeleport()
     {
-        SceneManager.LoadScene("Circo1");
+        SceneManager.LoadScene("Circo");
     }
 
     public void FlorestTeleport()

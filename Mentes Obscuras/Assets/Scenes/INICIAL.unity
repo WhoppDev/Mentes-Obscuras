@@ -287,24 +287,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &639447039 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 664615801682631403, guid: 2308570d3be63904fb2dacf6b1588e4a, type: 3}
-  m_PrefabInstance: {fileID: 664615800742025694}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &639447044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639447039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99c78a74b8091d54a89dbc827c790689, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  restartPanel: {fileID: 1971321432}
 --- !u!1 &942993840
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,11 +897,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1971321432 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 664615800429304500, guid: 2308570d3be63904fb2dacf6b1588e4a, type: 3}
-  m_PrefabInstance: {fileID: 664615800742025694}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &664615800742025694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -927,17 +904,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 664615800973040444, guid: 2308570d3be63904fb2dacf6b1588e4a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 639447044}
-    - target: {fileID: 664615800973040444, guid: 2308570d3be63904fb2dacf6b1588e4a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Restart
+    - target: {fileID: 664615800429304500, guid: 2308570d3be63904fb2dacf6b1588e4a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 664615800973040444, guid: 2308570d3be63904fb2dacf6b1588e4a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: RestartBtn, Assembly-CSharp
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 664615801388171227, guid: 2308570d3be63904fb2dacf6b1588e4a, type: 3}
       propertyPath: m_RootOrder
