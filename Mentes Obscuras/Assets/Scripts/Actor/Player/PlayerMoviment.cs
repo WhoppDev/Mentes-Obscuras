@@ -16,6 +16,7 @@ public class PlayerMoviment : MonoBehaviour
     [SerializeField] GameObject upperLantern;
 
     [SerializeField] private bool isGrounded = false;
+    public bool isSwiming = false;
 
     private Vector2 direction;
 
@@ -81,11 +82,15 @@ public class PlayerMoviment : MonoBehaviour
 
     public void Jump (InputAction.CallbackContext value)
     {
-        if (value.started && isGrounded)
+        if (value.started && isGrounded && !isSwiming)
         {
             anim.SetBool("Jump", true);
             rb.velocity = Vector2.up * jumpForce ;
             isGrounded = false;
+        }
+        else if (value.started && isSwiming)
+        {
+            rb.velocity = Vector2.up * jumpForce;
         }
     }
 
