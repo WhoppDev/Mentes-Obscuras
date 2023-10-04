@@ -101,6 +101,98 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Submarino",
+            "id": "21a598b2-b902-45e7-b71d-5c4eeda39d7a",
+            "actions": [
+                {
+                    "name": "Moviment",
+                    "type": "Value",
+                    "id": "1e6683b5-358b-41d4-a4ba-2cbf889b2a75",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Atirar",
+                    "type": "Button",
+                    "id": "b142d01b-55bb-4f51-a09d-8aecc5c24688",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "770bbf4a-455a-4b7a-9af8-c1f43f9c2152",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moviment",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "c03dea10-c4f1-4f8f-a605-d5933b78c9e0",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moviment",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "3c53dd6b-dcf1-4902-874e-700fb4cbf93a",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moviment",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "a9355954-c069-4a5a-86ec-589bad338a07",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moviment",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "0ccc5aa6-537b-4008-86fd-6f3ef64c6f05",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moviment",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "9c40805e-29f5-4d9c-878a-f367817baf35",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Atirar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

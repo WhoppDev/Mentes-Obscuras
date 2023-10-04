@@ -12,4 +12,9 @@ public class HudButton : MonoBehaviour
     {
         SceneManager.LoadScene("Floresta");
     }
+
+    public void ProfundezaTeleport()
+    {
+        SceneManager.LoadScene("Profundezas");
+    }
 }

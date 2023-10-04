@@ -7,12 +7,15 @@ public class PeixeLuzController : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed;
 
+    [SerializeField] private Collider2D fishAttack;
+
     private Vector2 direction;
 
     private bool isFollowingTarget = false;
     private float randomMoveDuration = 2f; // Duração do movimento aleatório
     private float randomPauseDuration = 1f; // Duração da pausa entre movimentos aleatórios
     private bool isMovingRandomly = false;
+
 
 
     void Start()
@@ -46,6 +49,15 @@ public class PeixeLuzController : MonoBehaviour
             isFollowingTarget = true;
             target = collision.gameObject;
             direction = (target.transform.position - transform.position).normalized;
+        }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (fishAttack.IsTouching(collision) && collision.gameObject.CompareTag("Player"))
+        {
+            Core.Instance.gameManager.ShowGameOver();
         }
     }
 

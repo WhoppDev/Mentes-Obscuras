@@ -20,17 +20,20 @@ public class AnimController : MonoBehaviour
         switch (sceneName)
         {
             case "Circo":
+                anim.SetBool("isSwiming", false);
                 anim.SetBool("isLantern", false);
                 moviment.isSwiming = false;
                 break;
 
             case "Floresta":
+                anim.SetBool("isSwiming", false);
                 anim.SetBool("isLantern", true);
                 moviment.isSwiming = false;
                 break;
 
             case "Profundezas":
                 anim.SetBool("isLantern", false);
+                anim.SetBool("isFalling", false);
                 anim.SetBool("isSwiming", true);
                 moviment.isSwiming = true;
                 break;
