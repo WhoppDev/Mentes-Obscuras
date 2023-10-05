@@ -22,11 +22,13 @@ public class GameManager : MonoBehaviour
     public void ShowGameOver()
     {
         gameOver.SetActive(true);
-        
+        Time.timeScale = 0f;
+
     }
     public void RestartGame(string LevelName)
     {
         SceneManager.LoadScene(LevelName);
+        Time.timeScale = 1f;
 
     }
 }

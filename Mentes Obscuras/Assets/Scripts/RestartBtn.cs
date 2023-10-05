@@ -11,11 +11,13 @@ public class RestartBtn : MonoBehaviour
 
         SceneManager.LoadScene(currentSceneName);
         restartPanel.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void Menu()
     {
         SceneManager.LoadScene("INICIAL");
         restartPanel.SetActive(false);
+        Time.timeScale = 1f;
     }
 }

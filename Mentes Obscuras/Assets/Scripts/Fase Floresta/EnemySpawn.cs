@@ -15,7 +15,7 @@ public class EnemySpawn : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(5f); 
+            yield return new WaitForSeconds(3f); 
 
             // Spawn enemy at a random spawn point
             GameObject chosenSpawnPoint = spawnPoint[UnityEngine.Random.Range(0, spawnPoint.Length)];

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossController : MonoBehaviour
 {
@@ -15,5 +16,13 @@ public class BossController : MonoBehaviour
 
         rb.velocity = new Vector2(rb.velocity.x, direction.y * bossSpeed);
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Core.Instance.gameManager.ShowGameOver();
+        }
     }
 }
