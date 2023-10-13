@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class RestartBtn : MonoBehaviour
 {
     [SerializeField] private GameObject restartPanel;
+    [SerializeField] private AudioSource deathAudio;
 
     public void Restart()
     {

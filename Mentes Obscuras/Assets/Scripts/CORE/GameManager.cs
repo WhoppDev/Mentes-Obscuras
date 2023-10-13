@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public GameObject gameOver;
 
     public static GameManager instance;
+    [SerializeField] private AudioSource deathAudio;
+
     void Start()
     {
         instance = this;
@@ -22,6 +24,7 @@ public class GameManager : MonoBehaviour
     public void ShowGameOver()
     {
         gameOver.SetActive(true);
+        deathAudio.Play();
         Time.timeScale = 0f;
 
     }
